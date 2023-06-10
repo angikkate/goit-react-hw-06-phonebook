@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './ContactItem.module.css';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contactsSlice';
@@ -18,6 +19,12 @@ const ContactItem = ({ id, name, number}) => {
       </button>
     </div>
   );
-};  
+}; 
+
+ContactItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+};
 
 export default ContactItem;
